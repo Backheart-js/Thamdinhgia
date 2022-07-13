@@ -1,14 +1,15 @@
 import React from 'react'
 import Header from './Header'
 import Sidebar from './Sidebar'
+import styles from './DefaultLayout.module.scss'
 
 function DefaultLayout({ children }) {
   return (
-    <div className="container-fluid">
+    <div className="">
         <Header />
-        <div className="">
+        <div className={styles.container}>
           <Sidebar />  
-          <div className="content">
+          <div className={styles.content}>
             { children }
           </div>
         </div>

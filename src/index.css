@@ -22,3 +22,10 @@ code {
     margin: auto;
     text-align: center;
 }
+
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
