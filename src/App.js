@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { Suspense, lazy, useEffect, useLayoutEffect, useState, useContext, Fragment } from 'react';
+import { BrowserRouter, Routes, Route, useParams, useNavigate, useLocation, Navigate } from "react-router-dom";
+import { DefaultLayout } from './components/Layout';
+import PrivateRoutes from './routes';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense>
+      <BrowserRouter>
+        <Routes>
+            {PrivateRoutes.map((route,index) => {
+                const Page = route.component;
+                const Layout = route.layout === null ? Fragment : DefaultLayout;
+                console.log(Layout);
+                return <Route key={index} path={route.path} element={
+                  <Layout>
+                    <Page />
+                  </Layout>
+                } />
+            })}
+        </Routes>
+      </BrowserRouter>
+    </Suspense>
   );
 }
 
 export default App;
+
+//
