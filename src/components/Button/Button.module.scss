@@ -1,0 +1,10 @@
+.btn {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    transform: translateY(6px);
+
+    +.btn {
+        margin-left: 20px;
+    }
+}

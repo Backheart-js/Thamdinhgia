@@ -12,7 +12,7 @@ function Sidebar() {
       <hr />
       <ul className="nav nav-pills flex-column mb-auto">
         <li className="nav-item">
-          <Link to="/" className="nav-link active" aria-current="page">
+          <Link to="/" className="nav-link link-dark active" aria-current="page">
             <svg className="bi pe-none me-2" width={16} height={16}><use xlinkHref="#home" /></svg>
             Dashboard
           </Link>

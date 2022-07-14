@@ -2,8 +2,6 @@ import React from 'react';
 import images from '../../../../assets/images';
 import styles from './Header.module.scss'
 
-console.log(images.logo);
-
 function Header() {
   return (
     <nav className={`navbar navbar-expand-lg bg-light ${styles.navbarWrapper}`}>
