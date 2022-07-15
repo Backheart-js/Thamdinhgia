@@ -1,0 +1,31 @@
+.modalContainer {
+    position: absolute;
+    padding: 16px 16px;
+    top: 100px;
+    background-color: #fff;
+    min-width: 500px;
+    max-width: 600px;
+    min-height: 300px;
+    border-radius: 8px;
+
+    .modalContent {
+        margin-bottom: 12px;
+        height: 210px;
+        border: 3px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .modalBtn {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        padding: 0 20px;
+        display: flex;
+        justify-content: end;
+    }
+
+}
+
+.contentWrapper {
+
+}

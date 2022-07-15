@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Table.module.scss'
 
-function Table({ labels, dataFromAPI, type }) {
+function Table({ onClick, labels, dataFromAPI, type }) {
   return (
     <table className="table">
         <thead>
@@ -19,7 +19,7 @@ function Table({ labels, dataFromAPI, type }) {
                         if(index === 1 && type === 'customers') {
                             return (
                                 <td key={index} className={`${styles.column}`}>
-                                    <a href="" className={`${styles.columnLink}`}>{value}</a>
+                                    <a onClick={onClick} title="modifier" href="" className={`${styles.columnLink}`}>{value}</a>
                                 </td>
                             ) 
                         } 
@@ -31,14 +31,14 @@ function Table({ labels, dataFromAPI, type }) {
                     }
                     )}
                     <td>
-                        <a href="" className={styles.linkPopup}>
-                            <i class={`bi bi-person ${styles.icon}`}></i>
+                        <a href="" className={styles.linkPopup} >
+                            <i class={`bi bi-person ${styles.icon}`} onClick={onClick} title="price"></i>
                         </a>
                         <a href="" className={styles.linkPopup}>
-                            <i class={`bi bi-check-circle-fill ${styles.icon}`}></i>
+                            <i class={`bi bi-check-circle-fill ${styles.icon}`} onClick={onClick} title="agree"></i>
                         </a>
-                        <a href="" className={styles.linkPopup}>
-                            <i class={`bi bi-x-circle-fill ${styles.icon}`}></i>
+                        <a href="" className={styles.linkPopup} >
+                            <i class={`bi bi-x-circle-fill ${styles.icon}`} onClick={onClick} title="delete"></i>
                         </a>
                     </td>
                 </tr>    
