@@ -1,10 +1,13 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
+
+import styles from '../Page.module.scss'
+
 import Button from '../../components/Button'
 import Input from '../../components/Input';
 import DefaultModal from '../../components/Modal/DefaultModal';
 import NotiModal from '../../components/Modal/NotiModal';
 import Table from '../../components/Table';
-import styles from './Customers.module.scss';
+
 
 const labels = ['NGÀY','KHÁCH HÀNG','ĐIỆN THOẠI','ĐỊA CHỈ','SỐ TIỀN VAY','TRẠNG THÁI','ĐƠN VỊ','CÁN BỘ'];
 const data = [

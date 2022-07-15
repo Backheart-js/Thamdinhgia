@@ -1,14 +1,11 @@
 import React from 'react';
-import images from '../../../../assets/images';
 import styles from './Header.module.scss'
 
 function Header() {
   return (
     <nav className={`navbar navbar-expand-lg bg-light ${styles.navbarWrapper}`}>
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          <img className="navbar-logo" src={images.logo} />
-        </a>
+      <div className={`container-fluid ${styles.container}`}>
+        
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
